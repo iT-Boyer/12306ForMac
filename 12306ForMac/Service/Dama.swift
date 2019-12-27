@@ -73,7 +73,7 @@ class Dama: NSObject {
         let key = AppKey + user
         let x1MD5 = md5(key)
         let x2 = x1MD5[x1MD5.startIndex...x1MD5.index(x1MD5.startIndex, offsetBy: 7)]
-        return x2
+        return String(x2)
     }
     
     private func getFileDataSign2(ofImage image:NSImage,user:String)->String{

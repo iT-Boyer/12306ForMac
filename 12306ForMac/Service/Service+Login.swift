@@ -33,7 +33,7 @@ extension Service {
     }
     
     func loginFlow(user:String,passWord:String,randCodeStr:String,success:@escaping ()->Void,failure:@escaping (NSError)->Void){
-        after(interval: 2).then{
+        after(seconds: 2).then{
             self.checkRandCodeForLogin(randCodeStr)
         }.then{() -> Promise<Void> in
             return self.loginUserWith(user, passWord: passWord, randCodeStr: randCodeStr)

@@ -17,7 +17,7 @@ class TrainTableCellView: NSTableCellView {
     
     var selected = false
     //change color by backgroundStyle not selected status
-    override var backgroundStyle: NSBackgroundStyle {
+    override var backgroundStyle: NSView.BackgroundStyle {
         didSet {
             updateTint()
         }

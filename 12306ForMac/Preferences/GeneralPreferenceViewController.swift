@@ -24,12 +24,12 @@ class GeneralPreferenceViewController: NSViewController, MASPreferencesViewContr
             return "GeneralPreferences"
         }
         set {
-            super.identifier = newValue
+            super.identifier = newValue.map { NSUserInterfaceItemIdentifier(rawValue: $0) }
         }
     }
     
     var toolbarItemImage: NSImage! {
-        return NSImage(named: NSImageNamePreferencesGeneral)
+        return NSImage(named: NSImage.preferencesGeneralName)
     }
 
     var toolbarItemLabel: String! {

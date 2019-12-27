@@ -16,7 +16,7 @@ class Service {
     
     private init(){ }
     
-    static var Manager : Alamofire.SessionManager = {
+    static var Manager : Alamofire.essionManager = {
         // Create the server trust policies
         let serverTrustPolicies: [String: ServerTrustPolicy] = ["kyfw.12306.cn": ServerTrustPolicy.performDefaultEvaluation(validateHost: true)]
 

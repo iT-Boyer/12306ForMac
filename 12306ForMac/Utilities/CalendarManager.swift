@@ -45,7 +45,7 @@ class CalendarManager:NSObject {
         let calendar = EKCalendar(for: .event, eventStore: eventStore)
         calendar.title = "12306ForMac"
         calendar.color = NSColor.gray
-        calendar.source = eventStore.defaultCalendarForNewEvents.source
+        calendar.source = eventStore.defaultCalendarForNewEvents!.source
         do {
             try self.eventStore.saveCalendar(calendar, commit: true)
             logger.info("calendarId = \(calendar.calendarIdentifier)")
